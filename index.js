@@ -46,6 +46,8 @@ app.post("/books",(req,res)=>{
     })
 })
 
-app.listen(8800, ()=>{
-    console.log("Connected to backendd");
+const port = process.env.PORT;
+
+app.listen(port, ()=>{
+    console.log(`Connected to backendd ${port}`);
 })
