@@ -4,9 +4,10 @@ import cors from "cors"
 
 const app = express()
 
-// app.use((req,res,next)=>{
-//     res.setHeader('Content-Type','text/html', 'charset=utf-8');
-// })
+app.use((req,res,next)=>{
+     res.setHeader('Content-Type', 'text/html; charset=utf-8');
+     next();
+})
 
 const db = mysql.createConnection({
     host:"sql7.freesqldatabase.com",
