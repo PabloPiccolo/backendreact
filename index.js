@@ -3,10 +3,11 @@ import mysql from "mysql"
 import cors from "cors"
 
 //dodanie  require express
-const express = require('express');
+// const express = require('express');
 
 
 const app = express()
+/*
 //----------------------------------------------------------------------------------------------
 //dodanie apikey
 const apiKey = process.env.API_KEY; 
@@ -24,8 +25,9 @@ function checkApiKey(req, res, next) {
   }
   
   // Używaj middleware do routów wymagających klucza API
-  app.use('/books', checkApiKey);
+  app.use("/books", checkApiKey);
 //------------------------------------------------------------------------------------------------
+*/
 app.use((req,res,next)=>{
      res.setHeader('Content-Type', 'text/html; charset=utf-8');
      next();
